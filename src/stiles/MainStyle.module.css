@@ -1,5 +1,8 @@
 .title{
     color: black;
-    text-align: center;
+    justify-content:start;
+    display: inline-flex;
+    width: 600px;
+    background-color: aqua;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
