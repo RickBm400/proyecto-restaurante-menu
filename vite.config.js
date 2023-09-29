@@ -19,6 +19,7 @@ export default defineConfig(() => {
        styles : path.resolve(__dirname, 'src', 'style'),
        pages : path.resolve(__dirname, 'src', 'pages'),
        components : path.resolve(__dirname, 'src', 'components'),
+       public: path.resolve(__dirname, 'public')
       }
     }
   }

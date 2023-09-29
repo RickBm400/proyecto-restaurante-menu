@@ -3,12 +3,18 @@ import { Box, AppBar, Grid, Icon } from '@mui/material'
 import PedalBikeIcon from '@mui/icons-material/PedalBike';
 // Style CSS
 import NavBar from 'styles/NavBar.module.css'
+// REact Router
+import { Link } from 'react-router-dom';
 
 const links = [
-    { name: 'Menú' },
-    { name: 'Reservas' },
-    { name: 'Contacto' },
+    { name: 'Menú', link: '/menu' },
+    { name: 'Reservas', link: '/reservation' },
+    { name: 'Contacto', link: '/contact' },
 ]
+
+const aly = () => {
+    console.log('ola');
+}
 
 export default function Home() {
     return (
@@ -23,15 +29,19 @@ export default function Home() {
             }}>
             <Grid container>
                 <Grid item xs={4}>
-                    <Box component='div'
-                        sx={{
-                            height: '100%',
-                            display: 'flex',
-                            justifySelf: 'center',
-                            alignItems: 'center'
-                        }}>
-                        <PedalBikeIcon fontSize='large'></PedalBikeIcon>
-                    </Box>
+                    <Link to='/'>
+                        <Box component='div'
+                            sx={{
+                                height: '100%',
+                                display: 'flex',
+                                justifySelf: 'center',
+                                alignItems: 'center',
+                                cursor: 'pointer',
+                                color: 'black'
+                            }}>
+                            <PedalBikeIcon fontSize='large'></PedalBikeIcon>
+                        </Box>
+                    </Link>
                 </Grid>
                 <Grid item xs={4}
                     sx={{
@@ -40,12 +50,14 @@ export default function Home() {
                     }}>
                     {links.map((item, i) => {
                         return (
-                            <Box
-                                component='div'
-                                key={i}
-                                className={NavBar.listItem}>
-                                {item.name}
-                            </Box>
+                            <Link to={item.link} style={{textDecoration: 'none'}}>
+                                <Box
+                                    component='div'
+                                    key={i}
+                                    className={NavBar.listItem}>
+                                    {item.name}
+                                </Box>
+                            </Link>
                         )
                     })}
                 </Grid>

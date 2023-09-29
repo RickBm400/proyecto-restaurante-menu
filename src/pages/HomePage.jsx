@@ -1,5 +1,6 @@
-import NavBar from 'components/Landing/NavBar.jsx'
+import NavBar from 'components/shared/NavBar.jsx'
 import { Container } from '@mui/material'
+import { Outlet } from 'react-router-dom'
 export default function Home() {
     return (
         <Container maxWidth='100vh'
@@ -9,7 +10,7 @@ export default function Home() {
                 paddingTop: '20px'
             }}>
             <NavBar />
-            <span>Pagina de Inicio</span>
+            <Outlet/>
         </Container>
     )
 }
