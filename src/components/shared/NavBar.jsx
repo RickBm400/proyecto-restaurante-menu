@@ -3,8 +3,10 @@ import { Box, AppBar, Grid, Icon } from '@mui/material'
 import PedalBikeIcon from '@mui/icons-material/PedalBike';
 // Style CSS
 import NavBar from 'styles/NavBar.module.css'
-// REact Router
+import {colors} from '../../constants/colorPalete';
+// React Router
 import { Link } from 'react-router-dom';
+
 
 const links = [
     { name: 'Menú', link: '/menu' },
@@ -22,9 +24,10 @@ export default function Home() {
             sx={{
                 display: 'flex',
                 flexDirection: 'row',
-                paddingInline: '30px',
-                color: 'black',
-                backgroundColor: '#CEDEBD',
+                paddingInline: '40px',
+                color: 'white',
+                width: '93%',
+                backgroundColor: colors.primary,
                 borderRadius: '10px'
             }}>
             <Grid container>
@@ -37,7 +40,7 @@ export default function Home() {
                                 justifySelf: 'center',
                                 alignItems: 'center',
                                 cursor: 'pointer',
-                                color: 'black'
+                                color: 'white'
                             }}>
                             <PedalBikeIcon fontSize='large'></PedalBikeIcon>
                         </Box>
