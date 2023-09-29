@@ -11,7 +11,10 @@ import {
 // Material UI icons
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
-export default function HomeCard () { 
+//Colors
+import { colors } from 'constants/colorPalete'
+
+export default function HomeCard() {
 
     const gridStyle = {
         display: 'flex',
@@ -19,20 +22,26 @@ export default function HomeCard () {
         alignItems: 'center',
         height: '500px',
     }
-    
+
     const cardStyle = {
-        width: '75%', height: '70%', display: 'flex', alignSelf: 'center', flexDirection: 'column ', borderRadius: '10px'
+        width: '75%', height: '70%', display: 'flex', alignSelf: 'center', flexDirection: 'column ', borderRadius: '0px', width: '100%'
     }
 
     return (
         <Grid container>
-            <Grid item 
+            <Grid item
+            xs={12}
+            md={3}
+            sx={gridStyle}>
+                MOSAICO 1
+            </Grid>
+            <Grid item
                 xs={12}
                 md={6}
-                sx={ gridStyle }
+                sx={gridStyle}
             >
-                <Card sx={{ ...cardStyle,  padding: '30px', justifyContent: 'space-between' }} elevation={0}>
-                    <CardContent>
+                <Card sx={{ ...cardStyle, padding: '30px', justifyContent: 'space-between', alignItems: 'center', borderRadius: '20px'}} elevation={0}>
+                    <CardContent sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                         <Typography sx={
                             {
                                 textTransform: 'uppercase',
@@ -52,7 +61,7 @@ export default function HomeCard () {
                                 paddingY: '20px'
                             }
                         }>
-                            Delight in <br /> every bite
+                            Delight in <br/> every bite
                         </Typography>
                         <Typography sx={
                             {
@@ -70,7 +79,7 @@ export default function HomeCard () {
                             elevation={0}
                             sx={
                                 {
-                                    backgroundColor: '#A78295',
+                                    backgroundColor: colors.buttons,
                                     textTransform: 'capitalize',
                                     borderRadius: '20px',
                                     height: '35px'
@@ -83,16 +92,9 @@ export default function HomeCard () {
                     </CardActions>
                 </Card>
             </Grid>
-            <Grid item xs={12} md={6} sx={gridStyle}>
-                <Card
-                    sx={{
-                        ...cardStyle, 
-                        padding: '30px', 
-                        justifyContent: 'space-between'
-                    }} elevation={0}>
-                        Olamundo
-                </Card>
+            <Grid item xs={12} md={3} sx={gridStyle}>
+
             </Grid>
         </Grid>
-    ) 
- }
+    )
+}

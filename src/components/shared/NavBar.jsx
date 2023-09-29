@@ -26,7 +26,6 @@ export default function Home() {
                 flexDirection: 'row',
                 paddingInline: '40px',
                 color: 'white',
-                width: '93%',
                 backgroundColor: colors.primary,
                 borderRadius: '10px'
             }}>

@@ -2,7 +2,10 @@
 
 * {
     font-family: 'Montserrat', sans-serif;
-    padding: 0px;
-    margin: 0px;
     font-size: 20px;
+}
+
+body {
+    background-color: #EFE1D1;
+    margin: 500px;
 }

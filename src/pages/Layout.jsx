@@ -11,7 +11,7 @@ export default function Home() {
                 flexDirection: 'column',
                 minHeight: '100vh',
                 paddingTop: '20px',
-                paddingX: {xs: '0px', md: '70px'}
+                paddingX: {xs: '0px', md: '190px'}
             }}>
             <NavBar />
             <Outlet/>
