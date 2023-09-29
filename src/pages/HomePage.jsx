@@ -1,16 +1,21 @@
-import NavBar from 'components/shared/NavBar.jsx'
-import { Container } from '@mui/material'
-import { Outlet } from 'react-router-dom'
-export default function Home() {
+import { Box, Grid } from "@mui/material";
+
+export default function HomePage() {
     return (
-        <Container maxWidth='100vh'
-            sx={{
-                bgcolor: '#303433',
-                minHeight: '100vh',
-                paddingTop: '20px'
-            }}>
-            <NavBar />
-            <Outlet/>
-        </Container>
+        <Grid container>
+            <Grid item xs={6}
+                sx={
+                    {
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        height: '500px'
+                    }
+                }
+            >
+                ola
+            </Grid>
+            <Grid item xs={6}>mund</Grid>
+        </Grid>
     )
 }
