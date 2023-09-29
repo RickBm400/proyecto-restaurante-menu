@@ -53,10 +53,9 @@ export default function Home() {
                     }}>
                     {links.map((item, i) => {
                         return (
-                            <Link to={item.link} style={{textDecoration: 'none'}}>
+                            <Link key={i} to={item.link} style={{textDecoration: 'none'}}>
                                 <Box
                                     component='div'
-                                    key={i}
                                     className={NavBar.listItem}>
                                     {item.name}
                                 </Box>
