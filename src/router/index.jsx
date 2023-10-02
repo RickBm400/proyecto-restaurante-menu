@@ -12,6 +12,12 @@ export const router = createBrowserRouter([
                 element: <HomePage/>
             },
             {
+                path: '/menu'
+            },
+            {
+                path: '/reservation'
+            },
+            {
                 path: "/contact",
                 element: <About/>
             }

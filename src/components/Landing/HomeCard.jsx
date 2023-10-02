@@ -30,18 +30,12 @@ export default function HomeCard() {
     return (
         <Grid container>
             <Grid item
-            xs={12}
-            md={3}
-            sx={gridStyle}>
-                MOSAICO 1
-            </Grid>
-            <Grid item
                 xs={12}
-                md={6}
+                md={5}
                 sx={gridStyle}
             >
-                <Card sx={{ ...cardStyle, padding: '30px', justifyContent: 'space-between', alignItems: 'center', borderRadius: '20px'}} elevation={0}>
-                    <CardContent sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                <Card sx={{ ...cardStyle, padding: '30px', justifyContent: 'space-between', borderRadius: '20px'}} elevation={0}>
+                    <CardContent >
                         <Typography sx={
                             {
                                 textTransform: 'uppercase',
@@ -58,7 +52,8 @@ export default function HomeCard() {
                                 fontSize: '50px',
                                 fontWeight: '700',
                                 lineHeight: '55px',
-                                paddingY: '20px'
+                                paddingY: '20px',
+                                color: colors.primary
                             }
                         }>
                             Delight in <br/> every bite
@@ -67,7 +62,7 @@ export default function HomeCard() {
                             {
                                 fontSize: '11px',
                                 fontWeight: '500',
-                                textTransform: 'uppercase'
+                                textTransform: 'uppercase',
                             }
                         }>
                             Come an taste all our products, they have <br /> the best quality and price overall.
@@ -76,13 +71,17 @@ export default function HomeCard() {
                     <CardActions>
                         <Button
                             variant="contained"
-                            elevation={0}
+                            disableElevation
+                            disableRipple
                             sx={
                                 {
                                     backgroundColor: colors.buttons,
                                     textTransform: 'capitalize',
-                                    borderRadius: '20px',
-                                    height: '35px'
+                                    borderRadius: '10px',
+                                    height: '35px',
+                                    '&:hover' :{
+                                        backgroundColor: colors.buttonsHover
+                                    }
                                 }
                             }
                             endIcon={<ArrowForwardIosIcon fontSize="10" />}
@@ -92,8 +91,8 @@ export default function HomeCard() {
                     </CardActions>
                 </Card>
             </Grid>
-            <Grid item xs={12} md={3} sx={gridStyle}>
-
+            <Grid item xs={12} md={7} sx={gridStyle}>
+                
             </Grid>
         </Grid>
     )
