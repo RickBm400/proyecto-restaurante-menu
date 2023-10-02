@@ -1,7 +1,7 @@
 
 # Coffee restaurant ![version](https://img.shields.io/badge/v-1.0.0-blue?style=square)
 
-Website created for improve knowledge about the practical uses of React framework.
+Website created for improve knowledge about practical uses of React framework.
 
 
 ## Tech stack
