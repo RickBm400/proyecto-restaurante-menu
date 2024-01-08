@@ -3,7 +3,7 @@ import { Box, AppBar, Grid, Icon } from '@mui/material'
 import PedalBikeIcon from '@mui/icons-material/PedalBike';
 // Style CSS
 import NavBar from 'styles/NavBar.module.css'
-import {colors} from '../../constants/colorPalete';
+import { colors } from '../../constants/colorPalete';
 // React Router
 import { Link } from 'react-router-dom';
 
@@ -13,10 +13,6 @@ const links = [
     { name: 'Reservas', link: '/reservation' },
     { name: 'Contacto', link: '/contact' },
 ]
-
-const aly = () => {
-    console.log('ola');
-}
 
 export default function Home() {
     return (
@@ -52,7 +48,7 @@ export default function Home() {
                     }}>
                     {links.map((item, i) => {
                         return (
-                            <Link key={i} to={item.link} style={{textDecoration: 'none'}}>
+                            <Link key={i} to={item.link} style={{ textDecoration: 'none' }}>
                                 <Box
                                     component='div'
                                     className={NavBar.listItem}>
