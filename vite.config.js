@@ -6,7 +6,6 @@ import * as path from 'path'
 // https://vitejs.dev/config/
 
 dotenv.config()
-console.log(path.resolve(__dirname, 'src', 'style'));
 
 export default defineConfig(() => {
   return {

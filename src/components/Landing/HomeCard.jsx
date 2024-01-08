@@ -14,6 +14,8 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 //Colors
 import { colors } from 'constants/colorPalete'
 
+// Images
+
 export default function HomeCard() {
 
     const gridStyle = {
@@ -34,7 +36,7 @@ export default function HomeCard() {
                 md={5}
                 sx={gridStyle}
             >
-                <Card sx={{ ...cardStyle, padding: '30px', justifyContent: 'space-between', borderRadius: '20px'}} elevation={0}>
+                <Card sx={{ ...cardStyle, padding: '30px', justifyContent: 'space-between',  bgcolor: colors.primary}} elevation={0}>
                     <CardContent >
                         <Typography sx={
                             {
@@ -53,7 +55,7 @@ export default function HomeCard() {
                                 fontWeight: '700',
                                 lineHeight: '55px',
                                 paddingY: '20px',
-                                color: colors.primary
+                                color: 'white'
                             }
                         }>
                             Delight in <br/> every bite
@@ -63,6 +65,7 @@ export default function HomeCard() {
                                 fontSize: '11px',
                                 fontWeight: '500',
                                 textTransform: 'uppercase',
+                                color: 'white'
                             }
                         }>
                             Come an taste all our products, they have <br /> the best quality and price overall.
@@ -92,7 +95,9 @@ export default function HomeCard() {
                 </Card>
             </Grid>
             <Grid item xs={12} md={7} sx={gridStyle}>
-                
+                <Card elevation={0} sx={{...cardStyle, padding: '30px', justifyContent: 'space-between', bgcolor: 'white'}}>
+                    txt home card
+                </Card>
             </Grid>
         </Grid>
     )
